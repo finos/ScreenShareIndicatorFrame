@@ -311,9 +311,19 @@ int main( int argc, char* argv[] ) {
 			return EXIT_FAILURE;
 		}
 		return trackWindow( trackedWindow );
-	} else if( argc > 2 ) {
-        return EXIT_FAILURE;
-    }
+	} else if( argc == 5) {
+
+		RECT bounds;
+
+		bounds.left = atoll( argv[ 1 ] );
+		bounds.top = atoll( argv[ 2 ] );
+		bounds.right = atoll( argv[ 3 ] );
+		bounds.bottom = atoll( argv[ 4 ] );
+		return trackScreen( bounds );
+
+    } else {
+		return EXIT_FAILURE;
+	}
 
 	return EXIT_SUCCESS;
 }
