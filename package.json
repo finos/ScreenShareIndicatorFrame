@@ -10,7 +10,7 @@
     "build:darwin": "clang SymphonyScreenShareIndicator.m -O2 -oSymphonyScreenShareIndicator -framework Cocoa -mmacosx-version-min=10.8"
   },
   "dependencies": {
-    "run-script-os": "1.0.7"
+    "run-script-os": "1.1.6"
   },
   "repository": {
     "type": "git",
